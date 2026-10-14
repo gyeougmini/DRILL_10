@@ -50,19 +50,12 @@ class Ball:
         self.y = 30
         self.frame = 0
         self.size = random.randint(1, 4)
-        self.speed = random.randint(1, 3)
+        self.speed = random.randint(1, 7)
         self.image = load_image('ball21x21.png')
         pass
 
     def update(self):
-        if(self.size == 1):
-            self.y += 7
-        elif(self.size == 2):
-            self.y += 5
-        elif(self.size == 3):
-            self.y += 3
-        elif(self.size):
-            self.y += 2
+        self.y += 2
         pass
 
     def draw(self):
