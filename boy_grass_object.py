@@ -55,14 +55,16 @@ class Ball:
         pass
 
     def update(self):
-        self.y += 2
+        if(self.y >= 600):
+            self.y = 550
+        self.y += self.speed
         pass
 
     def draw(self):
          frame_width = 21
          frame_height = 21
          self.image.clip_draw(self.frame * frame_width, 0, frame_width, frame_height,
-                              self.x, self.y * self.speed, frame_width * self.size, frame_height * self.size)
+                              self.x, self.y, frame_width * self.size, frame_height * self.size)
          pass
 
 
