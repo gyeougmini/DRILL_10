@@ -48,6 +48,8 @@ class Ball:
     def __init__(self):
         self.x = random.randint(100, 700)
         self.y = 30
+        self.frame = 0
+        self.size = random.randint(1, 4)
         self.image = load_image('ball21x21.png')
         pass
 
@@ -56,8 +58,11 @@ class Ball:
         pass
 
     def draw(self):
-        self.image.draw(self.x, self.y)
-        pass
+         frame_width = 21
+         frame_height = 21
+         self.image.clip_draw(self.frame * frame_width, 0, frame_width, frame_height,
+                              self.x, self.y, frame_width * self.size, frame_height * self.size)
+         pass
 
 
 def handle_events():
