@@ -52,9 +52,11 @@ class Ball:
         pass
 
     def update(self):
+        self.y += 5
         pass
 
     def draw(self):
+        self.image.draw(self.x, self.y)
         pass
 
 
@@ -86,7 +88,7 @@ def reset_world():
     world.append(zombie)
 
     ball = Ball()
-    world += ball
+    world.append(ball)
 
 
 
