@@ -50,6 +50,7 @@ class Ball:
         self.y = 30
         self.frame = 0
         self.size = random.randint(1, 4)
+        self.speed = random.randint(1, 3)
         self.image = load_image('ball21x21.png')
         pass
 
@@ -68,7 +69,7 @@ class Ball:
          frame_width = 21
          frame_height = 21
          self.image.clip_draw(self.frame * frame_width, 0, frame_width, frame_height,
-                              self.x, self.y, frame_width * self.size, frame_height * self.size)
+                              self.x, self.y * self.speed, frame_width * self.size, frame_height * self.size)
          pass
 
 
