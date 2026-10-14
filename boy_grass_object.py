@@ -54,7 +54,14 @@ class Ball:
         pass
 
     def update(self):
-        self.y += 5
+        if(self.size == 1):
+            self.y += 7
+        elif(self.size == 2):
+            self.y += 5
+        elif(self.size == 3):
+            self.y += 3
+        elif(self.size):
+            self.y += 2
         pass
 
     def draw(self):
