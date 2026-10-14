@@ -46,6 +46,9 @@ class Zombie:
 
 class Ball:
     def __init__(self):
+        self.x = 400
+        self.y = 30
+        self.image = load_image('ball21x21.png')
         pass
 
     def update(self):
